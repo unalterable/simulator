@@ -36,7 +36,7 @@ If this remains unlcear please refer to tests ("src/test/java/agent_simulation/A
 ## Documentation for Agent Simulation Implementation:
 
 
-#### AgentMap.java
+### AgentMap.java
 Defines the schema of the data to be used.
 
 * Found in “src/main/java/agent_simulation/”
@@ -51,7 +51,7 @@ Methods:
 
 
 
-#### AgentSimulationRules.java
+### AgentSimulationRules.java
 Defines the parameters and rules of an Agent Simulation
 
 * Found in “src/main/java/agent_simulation/”
@@ -88,7 +88,7 @@ Methods:
         Breed_C Regained (Switched to NC, then back to C)
 
 
-#### AgentSimulatorSetRules.java
+### AgentSimulatorSetRules.java
 Defines the parameters and rules of an Agent Simulation Set that varies "Brand Factor".
 
 * Found in “src/main/java/agent_simulation/”
