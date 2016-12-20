@@ -55,30 +55,33 @@ Methods:
 Defines the parameters and rules of an Agent Simulation
 
 Found in “src/main/java/agent_simulation/”
+
 Tests found in “src/test/java/agent_simulation/” (100% methods covered)
+
 implements ISimulationRules
 
+
 Constructor:
-* AgentSimulationRules(double brandFactor, IImporter importer)
+* `AgentSimulationRules(double brandFactor, IImporter importer);`
     To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
 Methods:
-* List<Record> getStartData();
+* `List<Record> getStartData();`
 
     retrieves the starting data from the IImporter passed into the constructor
     
-* Boolean continueTicking();
+* `Boolean continueTicking();`
 
     will continue until it reaches MAX_YEARS (set to 15)
     
-* void tick(List<Record> records);
+* `void tick(List<Record> records);`
 
     implements the following rules:
         Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
         If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
         If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
         
-* List analyseResults(List data);
+* `List analyseResults(List data);`
 
     calculates the following:
         Agents in each Breed
@@ -95,7 +98,7 @@ Tests found in “src/test/java/agent_simulation/” (100% methods covered)
 implements ISimulationSetRules
 
 Constructor:
-public AgentSimulationSetRules(IImporter importer)
+* `public AgentSimulationSetRules(IImporter importer)`
     To use this class you must instantiate it, passing an IImporter implementation.
 
 Methods:
