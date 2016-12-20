@@ -1,0 +1,6 @@
+Agent_Breed,Policy_ID,Age,Social_Grade,Payment_at_Purchase,Attribute_Brand,Attribute_Price,Attribute_Promotions,Auto_Renew,Inertia_for_Switch
+Breed_C,132802001.0,66,3,250,25.3,16.6,5.1,0,4
+Breed_C,132802002.0,66,3,250,25.3,16.6,5.1,0,9
+Breed_NC,1047692001.0,63,2,375,12.8,24,2.8,0,10
+Breed_NC,1047692002.0,63,4,375,12.8,24,2.8,0,9
+Breed_C,132802001.0,66,3,250,25.3,16.6,5.1,1,4
