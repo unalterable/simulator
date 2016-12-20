@@ -39,14 +39,14 @@ If this remains unlcear please refer to tests ("src/test/java/agent_simulation/A
 #### AgentMap.java
 Defines the schema of the data to be used.
 
-Found in “src/main/java/agent_simulation/”
-Tests found in “src/test/java/agent_simulation/” (100% methods covered)
-implements IRecordImportMap
+* Found in “src/main/java/agent_simulation/”
+* Tests found in “src/test/java/agent_simulation/” (100% methods covered)
+* implements IRecordImportMap
 
 Constructor: None
 
 Methods:
-* void mapStringValuesToRecord(Record record, String key, String value);
+* `void mapStringValuesToRecord(Record record, String key, String value);`
     sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
 
 
@@ -54,11 +54,9 @@ Methods:
 #### AgentSimulationRules.java
 Defines the parameters and rules of an Agent Simulation
 
-Found in “src/main/java/agent_simulation/”
-
-Tests found in “src/test/java/agent_simulation/” (100% methods covered)
-
-implements ISimulationRules
+* Found in “src/main/java/agent_simulation/”
+* Tests found in “src/test/java/agent_simulation/” (100% methods covered)
+* implements ISimulationRules
 
 
 Constructor:
@@ -93,9 +91,9 @@ Methods:
 #### AgentSimulatorSetRules.java
 Defines the parameters and rules of an Agent Simulation Set that varies "Brand Factor".
 
-Found in “src/main/java/agent_simulation/”
-Tests found in “src/test/java/agent_simulation/” (100% methods covered)
-implements ISimulationSetRules
+* Found in “src/main/java/agent_simulation/”
+* Tests found in “src/test/java/agent_simulation/” (100% methods covered)
+* implements ISimulationSetRules
 
 Constructor:
 * `public AgentSimulationSetRules(IImporter importer)`
