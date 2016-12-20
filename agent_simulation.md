@@ -43,10 +43,10 @@ Defines the schema of the data to be used.
 * Tests found in “src/test/java/agent_simulation/” (100% methods covered)
 * implements IRecordImportMap
 
-#### Constructor: 
-None
+##### Constructor: 
+* None
 
-#### Methods:
+##### Methods:
 * `void mapStringValuesToRecord(Record record, String key, String value);`
 
     sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
@@ -61,11 +61,11 @@ Defines the parameters and rules of an Agent Simulation
 * implements ISimulationRules
 
 
-#### Constructor:
+##### Constructor:
 * `AgentSimulationRules(double brandFactor, IImporter importer);`
     To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
-#### Methods:
+##### Methods:
 * `List<Record> getStartData();`
 
     retrieves the starting data from the IImporter passed into the constructor
@@ -97,11 +97,11 @@ Defines the parameters and rules of an Agent Simulation Set that varies "Brand F
 * Tests found in “src/test/java/agent_simulation/” (100% methods covered)
 * implements ISimulationSetRules
 
-#### Constructor:
+##### Constructor:
 * `public AgentSimulationSetRules(IImporter importer)`
     To use this class you must instantiate it, passing an IImporter implementation.
 
-#### Methods:
+##### Methods:
 * `List getVariantFactorsForSet();`
 
     gives a list of the different "Brand Factor"'s to be used.
