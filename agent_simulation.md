@@ -60,23 +60,26 @@ implements ISimulationRules
 
 Constructor:
 * AgentSimulationRules(double brandFactor, IImporter importer)
-
     To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
 Method:
 * List<Record> getStartData();
+
     retrieves the starting data from the IImporter passed into the constructor
     
 * Boolean continueTicking();
+
     will continue until it reaches MAX_YEARS (set to 15)
     
 * void tick(List<Record> records);
+
     implements the following rules:
         Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
         If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
         If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
         
 * List analyseResults(List data);
+
     calculates the following:
         Agents in each Breed
         Breed_C Lost (Switched to Breed_NC)
@@ -96,6 +99,7 @@ Constructor:
 
 Methods:
 * List getVariantFactorsForSet();
+
     gives a list of the different "Brand Factor"'s to be used.
 * ISimulatorRules buildSimulationRules(Object factor);
     builds an AgentSimulationRules for the given factor.
