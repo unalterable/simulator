@@ -101,8 +101,11 @@ public AgentSimulationSetRules(IImporter importer)
 Methods:
 
 `List getVariantFactorsForSet();`
+
 gives a list of the different "Brand Factor"'s to be used.
-* ISimulatorRules buildSimulationRules(Object factor);
-    builds an AgentSimulationRules for the given factor.
-* HashMap analyseAllResults(HashMap allResults)
-    collates all the results across the simulation and outputs it to the file using DefaultLogger.
+
+`ISimulatorRules buildSimulationRules(Object factor);`
+builds an AgentSimulationRules for the given factor.
+    
+`HashMap analyseAllResults(HashMap allResults)`
+collates all the results across the simulation and outputs it to the file using DefaultLogger.
