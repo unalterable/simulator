@@ -58,9 +58,7 @@ Defines the parameters and rules of an Agent Simulation
 * implements ISimulationRules
 
 Constructor:
-'''
-AgentSimulationRules(double brandFactor, IImporter importer)
-'''
+~~~~AgentSimulationRules(double brandFactor, IImporter importer)~~~~
 	To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
 Method:
