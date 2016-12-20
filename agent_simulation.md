@@ -62,7 +62,7 @@ Constructor:
 * AgentSimulationRules(double brandFactor, IImporter importer)
     To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
-Method:
+Methods:
 * List<Record> getStartData();
 
     retrieves the starting data from the IImporter passed into the constructor
@@ -99,7 +99,7 @@ public AgentSimulationSetRules(IImporter importer)
     To use this class you must instantiate it, passing an IImporter implementation.
 
 Methods:
-* List getVariantFactorsForSet();
+*List getVariantFactorsForSet();*
 
     gives a list of the different "Brand Factor"'s to be used.
 * ISimulatorRules buildSimulationRules(Object factor);
