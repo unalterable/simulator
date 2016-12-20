@@ -46,8 +46,10 @@ Defines the schema of the data to be used.
 Constructor: None
 
 Methods:
-~~~~void mapStringValuesToRecord(Record record, String key, String value);~~~~
-    sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
+~~~~
+void mapStringValuesToRecord(Record record, String key, String value);
+~~~~
+sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
 
 
 
@@ -65,24 +67,32 @@ AgentSimulationRules(double brandFactor, IImporter importer)
 To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
 Method:
-~~~~java List<Record> getStartData();~~~~
-    retrieves the starting data from the IImporter passed into the constructor
+~~~~java 
+List<Record> getStartData();
+~~~~
+retrieves the starting data from the IImporter passed into the constructor
 
-~~~~java Boolean continueTicking();~~~~
-    will continue until it reaches MAX_YEARS (set to 15)
+~~~~java 
+Boolean continueTicking();
+~~~~
+will continue until it reaches MAX_YEARS (set to 15)
 
-~~~~java void tick(List<Record> records);~~~~
-    implements the following rules:
-        Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
-        If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
-        If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
+~~~~java 
+void tick(List<Record> records);
+~~~~
+implements the following rules:
+Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
+If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
+If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
 
-~~~~java List analyseResults(List data);~~~~
-    calculates the following:
-        Agents in each Breed
-        Breed_C Lost (Switched to Breed_NC)
-        Breed_C Gained (Switch from Breed_NC)
-        Breed_C Regained (Switched to NC, then back to C)
+~~~~java 
+List analyseResults(List data);
+~~~~
+calculates the following:
+Agents in each Breed
+Breed_C Lost (Switched to Breed_NC)
+Breed_C Gained (Switch from Breed_NC)
+Breed_C Regained (Switched to NC, then back to C)
 
 
 #### AgentSimulatorSetRules.java
@@ -92,11 +102,17 @@ Defines the parameters and rules of an Agent Simulation Set that varies "Brand F
 * Tests found in “src/test/java/agent_simulation/” (100% methods covered)
 * implements ISimulationSetRules
 
-~~~~java List getVariantFactorsForSet();~~~~
-    gives a list of the different "Brand Factor"'s to be used.
+~~~~java 
+List getVariantFactorsForSet();
+~~~~
+gives a list of the different "Brand Factor"'s to be used.
 
-~~~~java ISimulatorRules buildSimulationRules(Object factor);~~~~
-    builds an AgentSimulationRules for the given factor.
+~~~~java 
+ISimulatorRules buildSimulationRules(Object factor);
+~~~~
+builds an AgentSimulationRules for the given factor.
 
-~~~~java HashMap analyseAllResults(HashMap allResults)~~~~
-    collates all the results across the simulation and outputs it to the file using DefaultLogger.
+~~~~java 
+HashMap analyseAllResults(HashMap allResults)
+~~~~
+collates all the results across the simulation and outputs it to the file using DefaultLogger.
