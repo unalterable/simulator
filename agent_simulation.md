@@ -99,9 +99,9 @@ public AgentSimulationSetRules(IImporter importer)
     To use this class you must instantiate it, passing an IImporter implementation.
 
 Methods:
-*List getVariantFactorsForSet();*
 
-    gives a list of the different "Brand Factor"'s to be used.
+**List getVariantFactorsForSet();**
+gives a list of the different "Brand Factor"'s to be used.
 * ISimulatorRules buildSimulationRules(Object factor);
     builds an AgentSimulationRules for the given factor.
 * HashMap analyseAllResults(HashMap allResults)
