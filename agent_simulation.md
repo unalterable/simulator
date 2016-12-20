@@ -50,6 +50,7 @@ Methods:
     sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
 
 
+
 #### AgentSimulationRules.java
 Defines the parameters and rules of an Agent Simulation
 
