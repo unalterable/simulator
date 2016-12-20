@@ -1,5 +1,7 @@
 # Agent Simulation
 
+## Main.java
+
 * Notes:
 
 Both the initial data and the results can be found in "data/".
@@ -36,6 +38,16 @@ This had the unusal effect of registering `0` `Breed_C_Regained` when the years 
 
 # Documentation for Agent Simulation Implementation:
 
+## Main.java
+This is an example of how to run this Agent simulation
+
+~~~~ java
+        IImporter importer = new CSVImporter("data/agent_data.csv", new AgentMap());
+        ISimulatorSetRules experimentRules = new AgentSimulationSetRules(importer);
+        ISimulatorSet experiment = new SimulatorSet(experimentRules);
+        experiment.runAll();
+        experiment.analyseAllResults();
+~~~~
 
 ## AgentMap.java
 Defines the schema of the data to be used.
