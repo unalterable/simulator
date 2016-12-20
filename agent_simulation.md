@@ -1,6 +1,6 @@
 # Agent Simulation
 
-## Notes:
+* Notes:
 
 Both the initial data and the results can be found in "data/".
 
@@ -33,10 +33,10 @@ If this remains unlcear please refer to tests ("src/test/java/agent_simulation/A
 
 
 
-## Documentation for Agent Simulation Implementation:
+# Documentation for Agent Simulation Implementation:
 
 
-### AgentMap.java
+## AgentMap.java
 Defines the schema of the data to be used.
 
 * Found in “src/main/java/agent_simulation/”
@@ -51,7 +51,7 @@ Methods:
 
 
 
-### AgentSimulationRules.java
+## AgentSimulationRules.java
 Defines the parameters and rules of an Agent Simulation
 
 * Found in “src/main/java/agent_simulation/”
