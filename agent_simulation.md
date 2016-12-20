@@ -88,7 +88,7 @@ Methods:
         Breed_C Regained (Switched to NC, then back to C)
 
 
-### AgentSimulatorSetRules.java
+* ## AgentSimulatorSetRules.java
 Defines the parameters and rules of an Agent Simulation Set that varies "Brand Factor".
 
 * Found in “src/main/java/agent_simulation/”
