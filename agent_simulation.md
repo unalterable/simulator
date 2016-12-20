@@ -95,7 +95,8 @@ Tests found in “src/test/java/agent_simulation/” (100% methods covered)
 implements ISimulationSetRules
 
 Constructor:
-
+public AgentSimulationSetRules(IImporter importer)
+    To use this class you must instantiate it, passing an IImporter implementation.
 
 Methods:
 * List getVariantFactorsForSet();
