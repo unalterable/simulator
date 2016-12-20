@@ -24,12 +24,12 @@ I was asked to implement a set of simulations with the following rules:
     	Breed_C Regained (Switched to NC, then back to C)
 
     
-    *It was unclear whether an agent which was firstly Breed_C, then Breed_NC, then Breed_C again should count in all three catagories.*
-    
-    *Therefore i assumed (if the life cycle of an agent was Breed_C=>Breed_NC=>Breed_C it should only count as Breed_C_Regained so as not to polute the other metrics. And that an agent Breed_C=>Breed_NC=>Breed_C=>Breed_NC=>Breed_C should still only count as 1 Breed_C_Regained.
-    If this remains unlcear please refer to tests ("src/test/java/agent_simulation/AgentSimulationRulesTest.java") for clarity.*
-    
-    *This had the unusal effect of registering 0 Breed_C_Regained when the years was an odd number. Therefore I included results from a simulation set run for 16 years instead of 15.*
+*It was unclear whether an agent which was firstly Breed_C, then Breed_NC, then Breed_C again should count in all three catagories.*
+
+*Therefore i assumed (if the life cycle of an agent was Breed_C=>Breed_NC=>Breed_C it should only count as Breed_C_Regained so as not to polute the other metrics. And that an agent Breed_C=>Breed_NC=>Breed_C=>Breed_NC=>Breed_C should still only count as 1 Breed_C_Regained.
+If this remains unlcear please refer to tests ("src/test/java/agent_simulation/AgentSimulationRulesTest.java") for clarity.*
+
+*This had the unusal effect of registering 0 Breed_C_Regained when the years was an odd number. Therefore I included results from a simulation set run for 16 years instead of 15.*
 
 
 
@@ -58,7 +58,9 @@ Defines the parameters and rules of an Agent Simulation
 * implements ISimulationRules
 
 Constructor:
-'''AgentSimulationRules(double brandFactor, IImporter importer)'''
+'''
+AgentSimulationRules(double brandFactor, IImporter importer)
+'''
 	To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
 Method:
