@@ -48,6 +48,7 @@ None
 
 #### Methods:
 * `void mapStringValuesToRecord(Record record, String key, String value);`
+
     sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
 
 
