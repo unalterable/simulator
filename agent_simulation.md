@@ -39,80 +39,61 @@ If this remains unlcear please refer to tests ("src/test/java/agent_simulation/A
 #### AgentMap.java
 Defines the schema of the data to be used.
 
-* Found in “src/main/java/agent_simulation/”
-* Tests found in “src/test/java/agent_simulation/” (100% methods covered)
-* implements IRecordImportMap
+Found in “src/main/java/agent_simulation/”
+Tests found in “src/test/java/agent_simulation/” (100% methods covered)
+implements IRecordImportMap
 
 Constructor: None
 
 Methods:
-~~~~
-void mapStringValuesToRecord(Record record, String key, String value);
-~~~~
-sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
+* void mapStringValuesToRecord(Record record, String key, String value);
+    sets the appropriate Strings, Integers, Booleans, and Doubles on the record.
 
 
 
 #### AgentSimulationRules.java
 Defines the parameters and rules of an Agent Simulation
 
-* Found in “src/main/java/agent_simulation/”
-* Tests found in “src/test/java/agent_simulation/” (100% methods covered)
-* implements ISimulationRules
+Found in “src/main/java/agent_simulation/”
+Tests found in “src/test/java/agent_simulation/” (100% methods covered)
+implements ISimulationRules
 
 Constructor:
-~~~~java
-AgentSimulationRules(double brandFactor, IImporter importer)
-~~~~
-To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
+* AgentSimulationRules(double brandFactor, IImporter importer)
+    To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
 Method:
-~~~~java 
-List<Record> getStartData();
-~~~~
-retrieves the starting data from the IImporter passed into the constructor
-
-~~~~java 
-Boolean continueTicking();
-~~~~
-will continue until it reaches MAX_YEARS (set to 15)
-
-~~~~java 
-void tick(List<Record> records);
-~~~~
-implements the following rules:
-Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
-If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
-If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
-
-~~~~java 
-List analyseResults(List data);
-~~~~
-calculates the following:
-Agents in each Breed
-Breed_C Lost (Switched to Breed_NC)
-Breed_C Gained (Switch from Breed_NC)
-Breed_C Regained (Switched to NC, then back to C)
+* List<Record> getStartData();'''
+    retrieves the starting data from the IImporter passed into the constructor
+* Boolean continueTicking();'''
+    will continue until it reaches MAX_YEARS (set to 15)
+* void tick(List<Record> records);'''
+    implements the following rules:
+        Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
+        If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
+        If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
+* List analyseResults(List data);'''
+    calculates the following:
+        Agents in each Breed
+        Breed_C Lost (Switched to Breed_NC)
+        Breed_C Gained (Switch from Breed_NC)
+        Breed_C Regained (Switched to NC, then back to C)
 
 
 #### AgentSimulatorSetRules.java
 Defines the parameters and rules of an Agent Simulation Set that varies "Brand Factor".
 
-* Found in “src/main/java/agent_simulation/”
-* Tests found in “src/test/java/agent_simulation/” (100% methods covered)
-* implements ISimulationSetRules
+Found in “src/main/java/agent_simulation/”
+Tests found in “src/test/java/agent_simulation/” (100% methods covered)
+implements ISimulationSetRules
 
-~~~~java 
-List getVariantFactorsForSet();
-~~~~
-gives a list of the different "Brand Factor"'s to be used.
+Constructor:
 
-~~~~java 
-ISimulatorRules buildSimulationRules(Object factor);
-~~~~
-builds an AgentSimulationRules for the given factor.
 
-~~~~java 
-HashMap analyseAllResults(HashMap allResults)
-~~~~
-collates all the results across the simulation and outputs it to the file using DefaultLogger.
+Methods:
+* List getVariantFactorsForSet();'''
+    gives a list of the different "Brand Factor"'s to be used.
+* ISimulatorRules buildSimulationRules(Object factor);
+    builds an AgentSimulationRules for the given factor.
+* HashMap analyseAllResults(HashMap allResults)'''
+    collates all the results across the simulation and outputs it to the file using DefaultLogger.
