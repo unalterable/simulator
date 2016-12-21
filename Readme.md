@@ -15,7 +15,7 @@ To import your data you can write an implementation of IImportRecordMap and pass
 ```
     IImporter importer = new CSVImporter("data/my_data.csv", new MyRecordMap());
 ```
-##### 2) Write your simulation rules with `ISimulatorRules`:
+##### 2) Write your simulation rules with `ISimulatorRules.java`:
 
 To define a specific simulation you must write an implementation of ISimulatorRules
 ```
@@ -24,7 +24,7 @@ To define a specific simulation you must write an implementation of ISimulatorRu
 ```
 You can then run your simulation with `simulator.run()`;
 
-##### 3) Write rules for a simulation set with `ISimulatorSetRules`:
+##### 3) Write rules for a simulation set with `ISimulatorSetRules.java`:
 
 To define a specific simulation you must write an implementation of ISimulatorSetRules. This allows you to conduct a range of the same simulation with varying starting factors.
 ```
