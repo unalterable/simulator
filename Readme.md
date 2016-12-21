@@ -36,7 +36,7 @@ You can then run your simulation set with `simulatorSet.runAll()`.
 
 
 
-# Documentation for platform Interfaces:
+# Documentation for platform interfaces:
 
 ## IRecordImportMap.java
 Found in “src/main/java/simulator_platform/records/”
@@ -87,7 +87,7 @@ Found in “src/main/java/simulator_platform/”
 
 
 
-Documentation for platform classes:
+#Documentation for platform classes:
 
 ## Simulator.java
 A class that runs a simple simulation, with rules defined by the  IsimulatorRules injected into its constructor
