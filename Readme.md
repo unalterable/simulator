@@ -41,6 +41,7 @@ You can then run your simulation set with simulatorSet.runAll().
 * Found in “src/main/java/simulator_platform/records/”
 
 * `void mapStringValuesToRecord(Record record, String key, String value);`
+
     This method must set the Key Value pair on the record using methods provided by Record. This must be implemented in order to map your data to the Record used by the Simulator.
 
 
@@ -123,13 +124,16 @@ A class that runs a  set of simple simulations, with rules defined by the  ISimu
 
 ##### Methods:
 * `void runAll();`
+
 	This method runs all the simulations.
 
 * `HashMap analyseAllResults;`
+
 	This method returns a list of analysed results from all the simulations.
 	The HashMap is of the form {UniqueStartingFactor => simulation_analysed_results}
 
 * `HashMap getAllEndData;`
+
 	This method returns a list of the end data for from all the simulations.
 	The HashMap is of the form {UniqueStartingFactor => simulation_data}.
 
@@ -142,6 +146,7 @@ A simple key/value store for Strings, Integers, Doubles, and Booleans. It can al
 
 ##### Constructor:
 * `Record(int id)`
+
 	To use this class you must instantiate it, passing a unique ID as an int.
 
 ##### Methods:
@@ -202,12 +207,12 @@ A CSV importer class that maps imported data to Records according to the IRecord
 * Tests found in “src/test/java/simulator_platform/records/” (100% methods covered)
 * implements IImporter interface
 
-#####Constructor:
+##### Constructor:
 * `CSVImporter(String fullPath, IRecordImportMap map)`
 
 	To use this class you must instantiate it, passing it the path to the CSV file (e.g. “data/agent_data.csv)
 
-#####Methods:
+##### Methods:
 * `List<Record> importRecords()`
 
 	returns a List<Records>, imported and mapped.
