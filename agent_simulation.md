@@ -1,7 +1,5 @@
 # Agent Simulation
 
-## Main.java
-
 * Notes:
 
 Both the initial data and the results can be found in "data/".
