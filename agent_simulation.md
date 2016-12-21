@@ -29,7 +29,7 @@ I was asked to implement a set of simulations with the following rules:
 
 Therefore i assumed if the life cycle of an agent was `Breed_C => Breed_NC => Breed_C` it should only count as `Breed_C_Regained` so as not to polute the other metrics. And that an agent `Breed_C => Breed_NC => Breed_C => Breed_NC => Breed_C` should still only count once as `Breed_C_Regained`.
 
-If this remains unlcear please refer to [AgentSimulationRulesTest](src/test/java/agent_simulation/AgentSimulationRulesTest.java) ( analyseResults1() & analyseResults2() ) for clarity.
+If this remains unlcear please refer to [AgentSimulationRulesTest](src/test/java/agent_simulation/AgentSimulationRulesTest.java) ( `analyseResults1()` & `analyseResults2()` ) for clarity.
 
 This had the unusal effect of registering `0` `Breed_C_Regained` when the years was an odd number. Therefore I included results from a simulation set run for `16` years instead of `15`.
 
