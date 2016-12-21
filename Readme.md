@@ -9,37 +9,39 @@ This is a simple abstract simulator module, created to be a good platform on whi
 
 ### It works as follows:
 
-1. Map your data:
-To import your data you can write an implementation of src/test/java/simulator_platform/records/IImportRecordMap and pass it into the CSV importer. 
+###### 1) Map your data with `IImportRecordMap.java`
+
+To import your data you can write an implementation of IImportRecordMap and pass it into the CSV importer. 
 ```
     IImporter importer = new CSVImporter("data/my_data.csv", new MyRecordMap());
 ```
+###### 2) Write your simulation rules with `ISimulatorRules`:
 
-2. Write your simulation rules:
 To define a specific simulation you must write an implementation of ISimulatorRules
 ```
     ISimulatorRules simulationRules = new MySimulationRules();
     Simulator simulator = new Simulator(simulationRules);
 ```
-You can then run your simulation with simulator.run();
+You can then run your simulation with `simulator.run()`;
 
+###### 3) Write rules for a simulation set with `ISimulatorSetRules`:
 
-3. Write rules for a simulation set:
 To define a specific simulation you must write an implementation of ISimulatorSetRules. This allows you to conduct a range of the same simulation with varying starting factors.
 ```
     ISimulatorSetRules setRules = new MySimulationSetRules();
     SimulatorSet simulatorSet = new SimulatorSet(setRules);
 ```
 Your simulationSet will then build all of your simulations according to the rules specified.
-You can then run your simulation set with simulatorSet.runAll().
+You can then run your simulation set with `simulatorSet.runAll()`.
 
 
 
 # Documentation for platform Interfaces:
 
 ## IRecordImportMap.java
-* Found in “src/main/java/simulator_platform/records/”
+Found in “src/main/java/simulator_platform/records/”
 
+##### Interface:
 * `void mapStringValuesToRecord(Record record, String key, String value);`
 
     This method must set the Key Value pair on the record using methods provided by Record. This must be implemented in order to map your data to the Record used by the Simulator.
@@ -48,6 +50,7 @@ You can then run your simulation set with simulatorSet.runAll().
 ## ISimulatorRules.java
 Found in “src/main/java/simulator_platform/”
 
+##### Interface:
 * `List<Record> getStartData();`
 
     specifies the starting data.
@@ -67,8 +70,9 @@ Found in “src/main/java/simulator_platform/”
 
 
 ## ISimulatorSetRules.java
-* Found in “src/main/java/simulator_platform/”
+Found in “src/main/java/simulator_platform/”
 
+##### Interface:
 * `List getVariantFactorsForSet();`
 
     specifies the different starting parameters for each simulation. Must be a list of objects (any objects can be used to set the starting parameters of each simulation in the set).
@@ -200,7 +204,7 @@ A simple key/value store for Strings, Integers, Doubles, and Booleans. It can al
 
 
 
-#### CSVImporter.java
+## CSVImporter.java
 A CSV importer class that maps imported data to Records according to the IRecordImportMap that you must inject into its constructor
 
 * Found in “src/main/java/simulator_platform/records/”
@@ -219,19 +223,19 @@ A CSV importer class that maps imported data to Records according to the IRecord
 
 
 
-#### DefaultLogger.java
+## DefaultLogger.java
 A basic logging service which writes to a file. Useful for outputting results in implementations of IsimulatorRules and IsimulatorSetRules.
 
 * Found in “src/main/java/simulator_platform/records/”
 * Tests found in “src/test/java/simulator_platform/records/” (100% methods covered)
 * implements IImporter interface
 
-#####Constructor:
+##### Constructor:
 * `DefaultLogger(String directory, String fileName)`
 
 	To use this class you must instantiate it, passing it the director you would like your log, and the fileName for your log.
 
-#####Methods:
+##### Methods:
 * `void log(String key, String log)`
 
 	this will append a simple log to the log file. The log is stored in two parts, for convenience in simulation logging.
