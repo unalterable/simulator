@@ -1,6 +1,6 @@
 # Agent Simulation
 
-* Notes:
+Notes:
 
 Both the initial data and the results can be found in "data/".
 
@@ -10,18 +10,19 @@ I was asked to implement a set of simulations with the following rules:
     INPUT - Range (0.1 -> 2.9)
 
     Run for 15 Years
-    Every Year:	Increment Age
-    	If Auto Renew - Maintain Breed
-        Else No Auto-Renew:	Affinity
-            Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
+    Every Year:	
+        Increment Age
+        If Auto Renew - Maintain Breed
+        Else No Auto-Renew:	
+            Affinity = Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
             If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
             If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
 
     Output:
         Agents in each Breed
-    	Breed_C Lost (Switched to Breed_NC)
-    	Breed_C Gained (Switch from Breed_NC)
-    	Breed_C Regained (Switched to NC, then back to C)
+        Breed_C Lost (Switched to Breed_NC)
+        Breed_C Gained (Switch from Breed_NC)
+        Breed_C Regained (Switched to NC, then back to C)
 
     
 **It was unclear whether an agent which was firstly Breed_C, then Breed_NC, then Breed_C again should count in all three catagories.**
@@ -38,6 +39,8 @@ This had the unusal effect of registering `0` `Breed_C_Regained` when the years 
 
 ## Main.java
 This is an example of how to run this Agent simulation
+
+
 
 ~~~~ java
         IImporter importer = new CSVImporter("data/agent_data.csv", new AgentMap());
@@ -74,6 +77,7 @@ Defines the parameters and rules of an Agent Simulation
 
 ##### Constructor:
 * `AgentSimulationRules(double brandFactor, IImporter importer);`
+
     To use this class you must instantiate it, passing the "Brand Factor" to be used in this simulation, and an IImporter pointed at the correct data set.
 
 ##### Methods:
@@ -88,17 +92,19 @@ Defines the parameters and rules of an Agent Simulation
 * `void tick(List<Record> records);`
 
     implements the following rules:
-        Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
-        If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
-        If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
+    
+            Affinity = 	Payment_at_Purchase/Attribute_Price + (2 * Attribute_Promotions * Inertia_for_Switch)
+            If Breed_C	Switch to Breed_NC if Affinity < (Social_Grade * Attribute_Brand)
+            If Breed_NC	Switch to Breed_C if Affinity < (Social_Grade * Attribute_Brand * Brand_Factor)
         
 * `List analyseResults(List data);`
 
     calculates the following:
-        Agents in each Breed
-        Breed_C Lost (Switched to Breed_NC)
-        Breed_C Gained (Switch from Breed_NC)
-        Breed_C Regained (Switched to NC, then back to C)
+        
+            Agents in each Breed
+            Breed_C Lost (Switched to Breed_NC)
+            Breed_C Gained (Switch from Breed_NC)
+            Breed_C Regained (Switched to NC, then back to C)
 
 
 ## AgentSimulatorSetRules.java
@@ -110,6 +116,7 @@ Defines the parameters and rules of an Agent Simulation Set that varies "Brand F
 
 ##### Constructor:
 * `public AgentSimulationSetRules(IImporter importer)`
+
     To use this class you must instantiate it, passing an IImporter implementation.
 
 ##### Methods:
