@@ -1,6 +1,6 @@
 # Simulator Platform:
 
-This is a simple abstract simulator module, created to be a good platform on which to run custom simulations. Documentation for the Agent implementation found in [agent_simulation.md](agent_simulation.md).
+This is a simple abstract simulator module, created to be an easy-to-use platform on which to run customised simulations on customised data sets. Documentation for the Agent implementation found in [agent_simulation.md](agent_simulation.md).
 
 * Language: basic Java 6.
 * TDD: 100% test coverage on all units: JUnit, Mockito
